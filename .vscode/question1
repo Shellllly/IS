@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int age;
+    double bankBalance;
+    string crbStatus;
+    int customerMonths;
+
+    // Capture customer details from the user
+    cout << "Enter your age: ";
+    cin >> age;
+
+    cout << "Enter your bank balance: ";
+    cin >> bankBalance;
+
+    cout << "Enter your CRB status (good/bad): ";
+    cin >> crbStatus;
+
+    cout << "Enter the number of months you've been a customer: ";
+    cin >> customerMonths;
+
+    // Check loan qualification conditions
+    if (age > 22 && bankBalance > 50000 && crbStatus == "good" && customerMonths > 6) {
+        cout << "Congratulations! You are qualified for the loan." << endl;
+    } else {
+        cout << "Sorry, you do not meet the loan qualification conditions." << endl;
+    }
+
+    return 0;
+}
